@@ -46,7 +46,7 @@ function App() {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Navbar */}
-      <nav className="bg-gradient-to-r from-slate-800 to-gray-900 text-white py-5 px-6 sticky top-0 z-10 shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
+      <nav className="bg-gradient-to-r from-slate-800 to-gray-900 text-white py-5 px-6 sticky top-0 z-10 shadow-[0_4px_20px_rgba(0,0,0,0.5)]" style={{ margin: 0 }}>
         <div className="2xl:container mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 flex items-center justify-center">
@@ -161,7 +161,7 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-gray-700 via-gray-800 to-blue-900 text-white py-20 px-6">
+      <section className="bg-gradient-to-r from-gray-700 via-gray-800 to-blue-900 text-white py-11 px-6">
         <div className="2xl:container mx-auto">
           <div className="flex justify-center items-center text-center h-[80vh]">
             <div className="max-w-2xl">
@@ -314,7 +314,7 @@ function App() {
             </ul>
             <div className="text-center mt-12">
               <button
-                onClick={() => navigate("/register")}
+                onClick={() => navigate("/login")}
                 className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-colors cursor-pointer text-md my-10 -mt-10"
               >
                 Book Now
@@ -376,8 +376,8 @@ function App() {
           </button>
           <p className="text-lg mt-4">
             Ready to use our services?{" "}
-            <Link to="/register" className="text-blue-300 hover:text-blue-500 transition-colors cursor-pointer">
-              Sign Up
+            <Link to="/login" className="text-blue-300 hover:text-blue-500 transition-colors cursor-pointer">
+              Sign In
             </Link>
           </p>
         </div>

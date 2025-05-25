@@ -27,8 +27,8 @@ const Login = () => {
     return (
         <div className="relative isolate bg-gray-900 h-screen overflow-hidden">
             {/* Navbar */}
-            <nav className="bg-gradient-to-r from-slate-800 to-gray-900 text-white py-5 px-6 sticky top-0 z-10 shadow-[0_4px_20px_rgba(0,0,0,0.5)]" style={{ margin: 0 }}>
-                <div className="container mx-auto flex justify-between items-center">
+            <nav className="bg-gradient-to-r from-slate-800 to-gray-900 text-white py-5 px-6 sticky top-0 z-10 shadow-[0_4px_20px_rgba(0,0,0,0.5)] " style={{ margin: 0 }}>
+                <div className="2xl:container mx-auto flex justify-between items-center">
                     <div className="flex items-center space-x-2">
                         <div className="w-8 h-8 flex items-center justify-center">
                             <FaBolt className="text-[#FFD700] text-2xl mt-1" />
@@ -37,53 +37,76 @@ const Login = () => {
                     </div>
 
                     <div className="hidden md:flex space-x-6 text-lg">
-                        <Link to="/" className="hover:text-blue-300 transition-colors duration-200 cursor-pointer">Home</Link>
-                        {/* <Link to="#about" className="hover:text-blue-300 transition-colors duration-200 cursor-pointer">About</Link>
-            <Link to="/contact" className="hover:text-blue-300 transition-colors duration-200 cursor-pointer">ContactUs</Link> */}
-                        <Link to="/login" className="bg-blue-600 hover:bg-blue-700 px-3 py-1 rounded-md text-white text-base hover:shadow-lg">Login</Link>
+                        <Link to="/" className="hover:text-blue-300 transition-colors duration-200 cursor-pointer">
+                            Home
+                            <span className="absolute inset-x-0 bottom-[-4px] h-[2px] bg-blue-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
+                        </Link>
+                        <Link
+                            to="/login"
+                            className="bg-blue-600 hover:bg-blue-700 px-3 py-1 rounded-md transition-all duration-200 text-white text-base hover:shadow-lg"
+                        >
+                            Login
+                        </Link>
                     </div>
 
                     <div className="md:hidden">
                         <button
-                            className="text-white transition-transform duration-200 hover:scale-105 focus:outline-none"
+                            className="text-white transition-transform duration-200 hover:scale-105 focus:outline-none -ml-5"
                             onClick={() => setIsOpen(!isOpen)}
                             aria-label={isOpen ? "Close menu" : "Open menu"}
                         >
                             {isOpen ? (
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-6 w-6"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                                 </svg>
                             ) : (
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-6 w-6"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                                 </svg>
                             )}
                         </button>
 
                         <div
-                            className={`-mt-1 fixed top-[76px] left-0 right-0 bg-gradient-to-r from-slate-800 to-gray-900 text-white w-full shadow-md transition-all duration-300 ease-in-out ${isOpen
-                                ? 'max-h-[300px] opacity-100 translate-y-0'
-                                : 'max-h-0 opacity-0 -translate-y-4 pointer-events-none overflow-hidden'
+                            className={` -mt-1.5 fixed top-[76px] left-0 right-0 bg-gradient-to-r from-slate-800 to-gray-900 text-white w-full shadow-md transition-all duration-300 ease-in-out ${isOpen
+                                ? "max-h-[300px] opacity-100 translate-y-0"
+                                : "max-h-0 opacity-0 -translate-y-4 pointer-events-none overflow-hidden"
                                 }`}
                         >
                             <ul className="flex flex-col items-center p-4 space-y-2">
-                                <li className="hover:translate-x-1 transition-transform duration-200">
-                                    <Link to="/" className="block py-2 px-3 hover:text-blue-300 cursor-pointer">Home</Link>
-                                </li>
-                                <li className="hover:translate-x-1 transition-transform duration-200">
-                                    <Link to="#about" className="block py-2 px-3 hover:text-blue-300 cursor-pointer">About</Link>
-                                </li>
-                                <li className="hover:translate-x-1 transition-transform duration-200">
-                                    <Link to="/contact" className="block py-2 px-3 hover:text-blue-300 cursor-pointer">ContactUs</Link>
+                                <li className="transform transition-transform duration-200 hover:translate-x-1">
+                                    <Link
+                                        to="/"
+                                        className="block py-2 px-3 hover:text-blue-300 transition-colors duration-200 cursor-pointer"
+                                    >
+                                        Home
+                                    </Link>
                                 </li>
                                 <li className="mt-2">
-                                    <Link to="/login" className="block py-1.5 px-3 bg-blue-600 hover:bg-blue-700 rounded-md text-center w-24 mx-auto">Login</Link>
+                                    <Link
+                                        to="/login"
+                                        className="block py-1.5 px-3 bg-blue-600 hover:bg-blue-700 rounded-md text-center transition-colors duration-200 w-24 mx-auto"
+                                    >
+                                        Login
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </nav>
+
 
             {/* Main Content */}
             <div className="flex items-center justify-center min-h-[600px] px-4 sm:px-6 lg:px-8 pt-4">
@@ -108,13 +131,33 @@ const Login = () => {
 
                     {/* Login Box */}
                     <div className="bg-gray-800 text-white rounded-lg shadow-lg p-8 w-full max-w-md relative mt-4">
-                        <FaBolt
+                        {/* <FaBolt
                             className="absolute top-4 right-4 text-5xl hover:rotate-6 hover:scale-110 transition duration-300"
                             style={{ transform: "rotate(20deg)", color: "#fff" }}
                             onMouseOver={(e) => (e.currentTarget.style.filter = "drop-shadow(0 0 20px #FFD700)")}
                             onMouseOut={(e) => (e.currentTarget.style.filter = "drop-shadow(0 0 10px #FFD700)")}
                             onTouchStart={(e) => (e.currentTarget.style.filter = "drop-shadow(0 0 20px #FFD700)")}
                             onTouchEnd={(e) => (e.currentTarget.style.filter = "drop-shadow(0 0 10px #FFD700)")}
+                        /> */}
+                        <FaBolt
+                            className="absolute top-4 right-4 text-5xl hover:rotate-6 hover:scale-110 transition duration-300"
+                            style={{
+                                transform: "rotate(20deg)",
+                                color: "#fff",
+                                filter: "drop-shadow(0 0 10px #FFD700)", // Default glow
+                            }}
+                            onMouseOver={(e) =>
+                                (e.currentTarget.style.filter = "drop-shadow(0 0 20px #FFD700)")
+                            }
+                            onMouseOut={(e) =>
+                                (e.currentTarget.style.filter = "drop-shadow(0 0 10px #FFD700)")
+                            }
+                            onTouchStart={(e) =>
+                                (e.currentTarget.style.filter = "drop-shadow(0 0 20px #FFD700)")
+                            }
+                            onTouchEnd={(e) =>
+                                (e.currentTarget.style.filter = "drop-shadow(0 0 10px #FFD700)")
+                            }
                         />
 
                         <div className="text-center mb-4">
