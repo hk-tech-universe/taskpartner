@@ -164,12 +164,12 @@ function App() {
       <section className="bg-gradient-to-r from-gray-700 via-gray-800 to-blue-900 text-white py-11 px-6">
         <div className="2xl:container mx-auto">
           <div className="flex justify-center items-center text-center h-[80vh]">
-            <div className="max-w-2xl">
+            {/* <div className="max-w-2xl">
               <h1
                 id="hero-heading"
-                className="text-4xl text-white md:text-6xl font-bold mb-6 opacity-0 transition-all duration-1000 ease-out sm:whitespace-nowrap"
+                className="text-5xl text-white md:text-6xl font-bold mb-6 opacity-0 transition-all duration-1000 ease-out sm:whitespace-nowrap"
               >
-                Welcome to Task Partner
+                Welcome to <span className="text-sky-500">Task Partner</span>
               </h1>
               <p
                 id="hero-paragraph"
@@ -189,6 +189,38 @@ function App() {
                   Login
                 </Link>
               </p>
+            </div> */}
+            <div className="max-w-3xl text-center md:text-left">
+              <h1
+                id="hero-heading"
+                className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6 text-white opacity-0 animate-fade-in"
+              >
+                Welcome to <span className="text-sky-400">Task Partner</span>
+              </h1>
+              <p
+                id="hero-paragraph"
+                className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 opacity-0 animate-fade-in delay-300"
+              >
+                Let us handle your tasks, so you can focus on what matters most.
+              </p>
+
+              <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
+                <button
+                  onClick={() => navigate("/login")}
+                  className="bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white text-lg font-semibold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300"
+                >
+                  🚀 Get Started
+                </button>
+                <p className="text-gray-400 text-base sm:text-lg">
+                  Already have an account?{" "}
+                  <Link
+                    to="/login"
+                    className="text-sky-400 underline underline-offset-4 hover:text-sky-300 transition duration-200"
+                  >
+                    Login
+                  </Link>
+                </p>
+              </div>
             </div>
           </div>
         </div>
