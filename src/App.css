@@ -1,0 +1,247 @@
+.animate-zoom-in {
+    animation: zoomIn 1.5s ease-out forwards;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 1.2s ease-out forwards;
+    animation-delay: 0.8s; /* Adjusted delay */
+  }
+  
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale(0.3); /* Smaller initial scale */
+    }
+    to {
+      opacity: 1;
+      transform: scale(1.1); /* Slightly larger final scale */
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Additional animation for a slide-in effect */
+  .animate-slide-in {
+    animation: slideIn 1.5s ease-out forwards;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* NAVBAR EFFECT */
+  /* App.css */
+  
+  /* General Styles */
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  .container {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* Navbar */
+  nav {
+    position: sticky; /* Make the navbar sticky */
+    top: 0;
+    z-index: 10;
+  }
+  
+  /* Hero Section and Footer Fix */
+  .hero-section,
+  .footer {
+    width: 100%; /* Replace '100vw' with '100%' to avoid scrollbar issues */
+  }
+  
+  .search-icon {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>');
+    background-size: 20px;
+    background-position: left 10px center;
+    background-repeat: no-repeat;
+    padding-left: 40px; /* Adjust based on icon size and padding */
+  }
+  
+  /* user dashboard */
+  /* Custom styles for DatePicker */
+  .react-datepicker {
+    font-family: "Inter", sans-serif;
+    border-radius: 0.5rem;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+  }
+  
+  .react-datepicker__header {
+    background-color: #f9fafb;
+    border-bottom: 1px solid #e5e7eb;
+    padding-top: 0.75rem;
+  }
+  
+  .react-datepicker__day-name,
+  .react-datepicker__day,
+  .react-datepicker__time-name {
+    width: 2rem;
+    line-height: 2rem;
+    margin: 0.2rem;
+  }
+  
+  .react-datepicker__day--selected,
+  .react-datepicker__day--in-selecting-range,
+  .react-datepicker__day--in-range {
+    background-color: #8b5cf6;
+    border-radius: 0.25rem;
+    color: white;
+  }
+  
+  .react-datepicker__day--keyboard-selected {
+    background-color: rgba(139, 92, 246, 0.2);
+    color: #8b5cf6;
+  }
+  
+  .react-datepicker__day:hover {
+    background-color: rgba(139, 92, 246, 0.1);
+    border-radius: 0.25rem;
+  }
+  
+  .react-datepicker__day--in-selecting-range:not(.react-datepicker__day--in-range) {
+    background-color: rgba(139, 92, 246, 0.5);
+  }
+  
+  .react-datepicker__navigation {
+    top: 0.75rem;
+  }
+  
+  .react-datepicker__navigation--previous {
+    left: 1rem;
+  }
+  
+  .react-datepicker__navigation--next {
+    right: 1rem;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background-color: #f4f7fc;
+    color: #333;
+  }
+  
+  header {
+    background-color: #111c44;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 22px;
+  }
+  
+  nav {
+    display: flex;
+    gap: 15px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .hero-video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 30px 20px;
+    background-color: #fff;
+  }
+  
+  .video-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+  }
+  
+  .video-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .video-card video {
+    width: 100%;
+    height: auto;
+  }
+  
+  .video-card p {
+    padding: 12px;
+    margin: 0;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .info-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #eef2fb;
+  }
+  
+  .info-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .info-section p {
+    font-size: 16px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  footer {
+    background-color: #111c44;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 14px;
+  }
+  
+  .footer-link {
+    color: #66b2ff;
+    text-decoration: underline;
+  }
+  
+  @media screen and (max-width: 600px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    nav {
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+  }
+  
